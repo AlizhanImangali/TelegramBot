@@ -22,7 +22,7 @@ func main() {
 	channel := bot.GetUpdatesChan(config)
 
 	crontab := cron.New()
-	crontab.AddFunc("@every 1h", func() {
+	crontab.AddFunc("@every 10m", func() {
 		SendHealthCheck(bot, -1001594451527)
 	})
 	crontab.Start()
